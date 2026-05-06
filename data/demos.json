@@ -1,0 +1,14 @@
+[
+  {
+    "question": "When did the president who set the precedent of a two term limit enter office?",
+    "solution": "<think>I need to find which president set the two-term precedent, then find when he entered office.</think><search>president who set two term limit precedent</search><information>Doc 1 (Title: \"Twenty-second Amendment\") George Washington voluntarily stepped down after two terms...</information><think>George Washington set the precedent. Now I need his inauguration date.</think><search>George Washington inauguration date</search><information>Doc 1 (Title: \"Presidency of George Washington\") Washington was inaugurated on April 30, 1789...</information><answer>April 30, 1789</answer>"
+  },
+  {
+    "question": "What is the capital of the country where the Eiffel Tower is located?",
+    "solution": "<think>The Eiffel Tower is in France. The capital of France is Paris.</think><answer>Paris</answer>"
+  },
+  {
+    "question": "Who wrote the novel that the movie The Godfather was based on?",
+    "solution": "<think>I need to find the novel behind The Godfather.</think><search>The Godfather novel author</search><information>Doc 1 (Title: \"The Godfather\") The Godfather is a crime novel by Mario Puzo, published in 1969...</information><think>The author is Mario Puzo.</think><answer>Mario Puzo</answer>"
+  }
+]

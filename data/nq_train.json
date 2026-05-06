@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answer": "Paris"
+  },
+  {
+    "question": "Who wrote Romeo and Juliet?",
+    "answer": "William Shakespeare"
+  },
+  {
+    "question": "What year did World War II end?",
+    "answer": "1945"
+  },
+  {
+    "question": "What is the largest planet in the solar system?",
+    "answer": "Jupiter"
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "answer": "Leonardo da Vinci"
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "answer": "Au"
+  },
+  {
+    "question": "How many continents are there on Earth?",
+    "answer": "7"
+  },
+  {
+    "question": "What ocean is the largest?",
+    "answer": "Pacific Ocean"
+  },
+  {
+    "question": "Who invented the telephone?",
+    "answer": "Alexander Graham Bell"
+  },
+  {
+    "question": "What is the speed of light?",
+    "answer": "299792458 meters per second"
+  },
+  {
+    "question": "What country has the largest population?",
+    "answer": "China"
+  },
+  {
+    "question": "What is the hardest natural substance?",
+    "answer": "diamond"
+  },
+  {
+    "question": "Who was the first person to walk on the moon?",
+    "answer": "Neil Armstrong"
+  },
+  {
+    "question": "What is the smallest country in the world?",
+    "answer": "Vatican City"
+  },
+  {
+    "question": "What language has the most native speakers?",
+    "answer": "Mandarin Chinese"
+  },
+  {
+    "question": "What is the longest river in the world?",
+    "answer": "Nile"
+  },
+  {
+    "question": "What element has the atomic number 1?",
+    "answer": "Hydrogen"
+  },
+  {
+    "question": "Who developed the theory of relativity?",
+    "answer": "Albert Einstein"
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "answer": "Mount Everest"
+  },
+  {
+    "question": "What year did the Berlin Wall fall?",
+    "answer": "1989"
+  }
+]
