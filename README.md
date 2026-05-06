@@ -155,8 +155,8 @@ All hyperparameters in `config.py`:
 
 ## References
 
-- Ye et al. (2026) — ICRL paper: https://arxiv.org/abs/2603.08068
-- Shao et al. (2024) — DeepSeekMath / GRPO
-- Schulman et al. (2017) — PPO
-- Ahmadian et al. (2024) — RLOO
-- Jin et al. (2025) — Search-R1
+- Ye et al. (2026)          ICRL paper: https://arxiv.org/abs/2603.08068
+- Shao et al. (2024)        DeepSeekMath / GRPO
+- Schulman et al. (2017)    PPO
+- Ahmadian et al. (2024)    RLOO
+- Jin et al. (2025)         Search-R1
