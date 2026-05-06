@@ -76,7 +76,7 @@ icrl_rl_comparison/
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/your-username/icrl_rl_comparison
+git clone https://github.com/gbkeku/icrl_rl_comparison
 cd icrl_rl_comparison
 
 # 2. Create virtual environment
