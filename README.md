@@ -9,8 +9,8 @@
 
 ## Overview
 
-This project systematically compares four RL optimization algorithms —
-**GRPO**, **PPO**, **REINFORCE with baseline**, and **RLOO** — within
+This project systematically compares four RL optimization algorithms:
+**GRPO**, **PPO**, **REINFORCE with baseline**, and **RLOO**,  within
 the fixed ICRL curriculum framework (Ye et al., 2026), holding all
 other variables constant.
 
