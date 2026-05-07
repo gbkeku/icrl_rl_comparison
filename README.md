@@ -105,6 +105,7 @@ python run_reinforce.py
 python run_rloo.py
 
 python main.py              # runs all 4 sequentially
+python main.py --algo all   # runs all 4 sequentially
 python main.py --algo grpo  # runs just one
 
 # Generate comparison figures (run anytime after any training)
