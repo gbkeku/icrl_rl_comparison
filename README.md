@@ -9,8 +9,8 @@
 
 ## Overview
 
-This project systematically compares four RL optimization algorithms:
-**GRPO**, **PPO**, **REINFORCE with baseline**, and **RLOO**,  within
+This project systematically compares four RL optimization algorithms —
+**GRPO**, **PPO**, **REINFORCE with baseline**, and **RLOO** — within
 the fixed ICRL curriculum framework (Ye et al., 2026), holding all
 other variables constant.
 
@@ -76,7 +76,7 @@ icrl_rl_comparison/
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/gbkeku/icrl_rl_comparison
+git clone https://github.com/your-username/icrl_rl_comparison
 cd icrl_rl_comparison
 
 # 2. Create virtual environment
@@ -103,10 +103,6 @@ python run_grpo.py        # baseline (~30-40 min)
 python run_ppo.py
 python run_reinforce.py
 python run_rloo.py
-
-python main.py              # runs all 4 sequentially
-python main.py --algo all   # runs all 4 sequentially
-python main.py --algo grpo  # runs just one
 
 # Generate comparison figures (run anytime after any training)
 python compare_all.py
@@ -156,8 +152,8 @@ All hyperparameters in `config.py`:
 
 ## References
 
-- Ye et al. (2026)          ICRL paper: https://arxiv.org/abs/2603.08068
-- Shao et al. (2024)        DeepSeekMath / GRPO
-- Schulman et al. (2017)    PPO
-- Ahmadian et al. (2024)    RLOO
-- Jin et al. (2025)         Search-R1
+- Ye et al. (2026) — ICRL paper: https://arxiv.org/abs/2603.08068
+- Shao et al. (2024) — DeepSeekMath / GRPO
+- Schulman et al. (2017) — PPO
+- Ahmadian et al. (2024) — RLOO
+- Jin et al. (2025) — Search-R1
