@@ -29,7 +29,6 @@ other variables constant.
 ```
 icrl_rl_comparison/
 ├── config.py                  # Central hyperparameter config
-├── main.py                    # Entry point
 ├── run_grpo.py                # GRPO full training run
 ├── run_ppo.py                 # PPO full training run
 ├── run_reinforce.py           # REINFORCE full training run
@@ -76,7 +75,7 @@ icrl_rl_comparison/
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/your-username/icrl_rl_comparison
+git clone https://github.com/gbkeku/icrl_rl_comparison
 cd icrl_rl_comparison
 
 # 2. Create virtual environment

@@ -1,7 +1,6 @@
 # run_grpo.py
 # ─────────────────────────────────────────────
 # GRPO training — uses ICRLTrainer exclusively
-# ✅ Correct ICRL: tool loop + retrieval masking
 # ─────────────────────────────────────────────
 import json
 import sys
