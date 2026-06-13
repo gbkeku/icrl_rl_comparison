@@ -188,7 +188,7 @@ class ICRLTrainer:
         self.ref_model = load_ref_model()
         print(f"Ref model ready     | VRAM: {vram()}")
 
-        # ── FIX 1: PPO value head for proper advantage ──
+        # PPO value head for proper advantage ──
         if algorithm == "ppo":
             self.value_head = torch.nn.Linear(
                 self.model.config.hidden_size, 1, bias=False
@@ -204,13 +204,13 @@ class ICRLTrainer:
         if algorithm == "reinforce":
             self.rf_agent = ReinforceWithBaseline(alpha=0.99)
 
-        # ── FIX 6 & 7: Extended logs ─────────────────
+        # ── Extended logs ─────────────────
         self.logs = {
             "reward":          [],   # avg reward per step
-            "response_length": [],   # FIX 4: in tokens
+            "response_length": [],   # In tokens
             "valid_searches":  [],   # search calls per step
-            "tool_success":    [],   # FIX 3: search helped?
-            "em":              [],   # FIX 6: exact match rate
+            "tool_success":    [],   # Search helped?
+            "em":              [],   # Exact match rate
             "stage":           [],   # curriculum stage
         }
 
@@ -290,11 +290,6 @@ class ICRLTrainer:
         Compute PPO advantages using value head.
 
         advantage_i = reward_i - V(s_i)
-
-        Without this fix, PPO == REINFORCE (no value baseline).
-        With this fix, value head learns to predict expected reward,
-        and the advantage measures how much better each rollout was.
-        """
         advantages = []
         for rollout, reward in zip(rollouts, rewards):
             prompt    = rollout["prompt"]
@@ -371,7 +366,6 @@ class ICRLTrainer:
                 ref_logits[:, :-1, :], dim=-1
             ).gather(2, ids.unsqueeze(-1)).squeeze(-1)[0]
 
-        # ── FIX 2: Exact token mask ───────────
         mask  = build_token_mask_exact(
             full_text         = full_text,
             retrieval_spans   = retrieval_spans,
@@ -396,8 +390,7 @@ class ICRLTrainer:
             policy_loss = -(token_lp * adv_t * mask).sum() / n_tok
 
         elif self.algorithm == "ppo":
-            # ✅ FIX 1: Use value-based advantage (not raw reward)
-            adv_clip = (adv_t - value.detach()).clamp(-5, 5)
+                        adv_clip = (adv_t - value.detach()).clamp(-5, 5)
             ratio    = torch.exp(token_lp - ref_lp)
             surr1    = ratio * adv_clip
             surr2    = torch.clamp(
