@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────
-# Unified ICRL Trainer — v3 (All 7 fixes applied)
+# Unified ICRL Trainer
 # ─────────────────────────────────────────────
 import re
 import gc
@@ -83,7 +83,6 @@ def build_rollout_prompt(question, demos, n_shot):
     return prompt
 
 
-# ── FIX 2: Exact token mask using offset mapping ──
 def build_token_mask_exact(full_text, retrieval_spans,
                             tokenizer, prompt_len_tokens,
                             total_tokens):
@@ -158,8 +157,7 @@ def build_token_mask_exact(full_text, retrieval_spans,
 # ── ICRLTrainer ───────────────────────────────
 class ICRLTrainer:
     """
-    Unified ICRL trainer — v3 with all 7 fixes.
-
+    Unified ICRL trainer
     run_rollout()  : multi-turn tool loop, exact retrieval_spans
     compute_loss() : exact masked gradient, corrected KL
     train_step()   : EM + tool_success logged per step
@@ -286,7 +284,7 @@ class ICRLTrainer:
             "prompt":          prompt,
         }
 
-    # ── FIX 1: PPO advantage from value head ──
+    # ── PPO advantage from value head ──
     def _compute_ppo_advantages(self, rollouts, rewards):
         """
         Compute PPO advantages using value head.
@@ -412,7 +410,6 @@ class ICRLTrainer:
                                  dtype=torch.bfloat16).unsqueeze(0))
             )
 
-        # ── FIX 5: Corrected KL direction ─────
         # KL(π_new || π_ref) = E[log π_new - log π_ref]
         # This penalizes the NEW policy deviating from reference.
         # Previous version had (token_lp - ref_lp) which is correct
@@ -565,8 +562,6 @@ class ICRLTrainer:
 
         # ── Final cleanup at stage end ───────────────
         clear()
-
-        # ✅ FIX 7: Stage-level summary
         n = len(stage_rewards)
         print(f"\n  ┌─ Stage {name} Summary ({'─'*30})")
         print(f"  │  Avg Reward   : {sum(stage_rewards)/n:.4f}")
