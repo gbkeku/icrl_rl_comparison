@@ -88,6 +88,7 @@ pip install -r requirements.txt
 pip install git+https://github.com/RUC-NLPIR/FlashRAG.git
 
 # 4. Install CUDA PyTorch (GPU) if you are using GPU
+If Device is CPU, then edit the Device Type in config.py file, DEVICE = "cpu" 
 pip uninstall torch torchvision -y
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 ```
